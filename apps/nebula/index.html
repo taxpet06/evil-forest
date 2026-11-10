@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'">
+  <title>Nebula</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #05030b; }
+    body.idle { cursor: none; }
+    canvas { display: block; width: 100vw; height: 100vh; }
+    #status {
+      position: fixed; left: 32px; bottom: 28px; margin: 0; max-width: 60ch;
+      font: 400 15px/1.45 system-ui, sans-serif; letter-spacing: 0.01em;
+      color: #e4dcff; text-shadow: 0 1px 12px #05030b;
+      transition: opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    #status.hidden { opacity: 0; }
+    ::selection { background: #9b4dff; color: #fff; }
+  </style>
+</head>
+<body>
+  <canvas id="sky"></canvas>
+  <p id="status" role="status" aria-live="polite"></p>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

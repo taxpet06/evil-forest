@@ -1,0 +1,36 @@
+{
+  "name": "nebula",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MIDI instrument: ambient pad, celesta voice, fluid visuals",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test music.test.js",
+    "dist:linux": "electron-builder --linux",
+    "dist:win": "electron-builder --win"
+  },
+  "build": {
+    "appId": "dev.evilforest.nebula",
+    "productName": "Nebula",
+    "files": [
+      "main.js",
+      "app.js",
+      "audio.js",
+      "visuals.js",
+      "music.js",
+      "index.html"
+    ],
+    "linux": {
+      "target": "AppImage"
+    },
+    "win": {
+      "target": "portable"
+    }
+  },
+  "devDependencies": {
+    "electron": "^45.2.3",
+    "electron-builder": "^26.18.0"
+  }
+}
