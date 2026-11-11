@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'">
+  <title>Chronos</title>
+  <style>
+    @font-face { font-family: 'Cinzel'; src: url('cinzel.woff2') format('woff2'); font-weight: 400 700; font-display: block; }
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #06070c; }
+    body.idle { cursor: none; }
+    canvas { display: block; width: 100vw; height: 100vh; }
+    ::selection { background: #c9a24b; color: #06070c; }
+  </style>
+</head>
+<body>
+  <canvas id="wall" aria-label="A wall of clocks that all disagree"></canvas>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

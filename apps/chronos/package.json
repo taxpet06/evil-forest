@@ -1,0 +1,25 @@
+{
+  "name": "chronos",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A wall of astronomical clocks that all disagree",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test chaos.test.js",
+    "dist:linux": "electron-builder --linux",
+    "dist:win": "electron-builder --win"
+  },
+  "build": {
+    "appId": "dev.evilforest.chronos",
+    "productName": "Chronos",
+    "files": ["main.js", "app.js", "audio.js", "chaos.js", "index.html", "cinzel.woff2", "OFL.txt"],
+    "linux": { "target": "AppImage" },
+    "win": { "target": "portable" }
+  },
+  "devDependencies": {
+    "electron": "^45.2.3",
+    "electron-builder": "^26.18.0"
+  }
+}
